@@ -23,6 +23,11 @@ functions with an undefined arity.
 
 ### variadic function
 
+Variadic functions ALWAYS return functions.  When you're at a terminal evaluation point
+using `operator()` you must call `value()` to retrieve the result.  The `eval()` member
+can be used to evaluate with `operator()` and retrieve the value.  This may additionally
+avoid creating copies when the function parameters are `const&`.
+
 ## data variables
 
 All data variables are also functions.
@@ -33,3 +38,13 @@ All data variables are also functions.
 ## type constructors
 
 * naming - start with capital letters.  Example: List
+
+# operators
+
+## Fundational
+
+* add
+* sub
+* mul
+* div
+* eq
